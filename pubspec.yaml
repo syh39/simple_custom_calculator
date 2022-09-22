@@ -1,6 +1,6 @@
 name: simple_custom_calculator
-description: A simple custom calculator
-version: 0.0.1
+description: A simple custom calculator template for scalable customization. See the example for instructions on how to use it.
+version: 0.0.2
 homepage: https://github.com/syh39/simple_custom_calculator
 
 environment:

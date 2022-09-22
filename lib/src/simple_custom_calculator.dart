@@ -1,14 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:function_tree/function_tree.dart';
 
+// A simple template for the calculator
+// You may customize as you like
 class SimpleCustomCalculator extends StatefulWidget {
+  // width of calculator
+  // required variable for the constructor
   final double width;
+
+  // height of calculator
+  // required variable for the constructor
   final double height;
+
+  // background color of calculator
   final Color? backgroundColor;
+
+  // button color of calculator
   final Color? buttonColor;
+
+  // if buttonIsRectangle is true -> rectangle / false - circle
   final bool buttonIsRectangle;
+
+  // double value for button padding
   final double buttonPadding;
+
+  // the size of the numbers and symbols shown after the input
   final double numberSize;
+
   const SimpleCustomCalculator(
       {Key? key,
         required this.width,
@@ -42,7 +60,6 @@ class _SimpleCustomCalculatorState extends State<SimpleCustomCalculator> {
               child: TextFormField(
                   decoration: const InputDecoration(
                     border: InputBorder.none,
-
                   ),
                   controller: textController,
                   style: TextStyle(color: Colors.white, fontSize: widget.numberSize),
@@ -71,7 +88,7 @@ class _SimpleCustomCalculatorState extends State<SimpleCustomCalculator> {
                                 },
                                 style: ElevatedButton.styleFrom(
                                     splashFactory: NoSplash.splashFactory,
-                                    primary: widget.buttonColor,
+                                    backgroundColor: widget.buttonColor,
                                     fixedSize: Size(
                                       widget.width / 5,
                                       widget.width / 5,
@@ -97,7 +114,7 @@ class _SimpleCustomCalculatorState extends State<SimpleCustomCalculator> {
 
                                 },
                                 style: ElevatedButton.styleFrom(
-                                    primary: widget.buttonColor,
+                                    backgroundColor: widget.buttonColor,
                                     fixedSize: Size(
                                       widget.width / 5,
                                       widget.width / 5,
@@ -125,7 +142,7 @@ class _SimpleCustomCalculatorState extends State<SimpleCustomCalculator> {
                                   textController.text = '${textController.text}%';
                                 },
                                 style: ElevatedButton.styleFrom(
-                                    primary: widget.buttonColor,
+                                    backgroundColor: widget.buttonColor,
                                     fixedSize: Size(
                                       widget.width / 5,
                                       widget.width / 5,
@@ -153,7 +170,7 @@ class _SimpleCustomCalculatorState extends State<SimpleCustomCalculator> {
                                   textController.text = '${textController.text}/';
                                 },
                                 style: ElevatedButton.styleFrom(
-                                    primary: widget.buttonColor,
+                                    backgroundColor: widget.buttonColor,
                                     fixedSize: Size(
                                       widget.width / 5,
                                       widget.width / 5,
@@ -188,7 +205,7 @@ class _SimpleCustomCalculatorState extends State<SimpleCustomCalculator> {
                                   textController.text = '${textController.text}7';
                                 },
                                 style: ElevatedButton.styleFrom(
-                                    primary: widget.buttonColor,
+                                    backgroundColor: widget.buttonColor,
                                     fixedSize: Size(
                                       widget.width / 5,
                                       widget.width / 5,
@@ -215,7 +232,7 @@ class _SimpleCustomCalculatorState extends State<SimpleCustomCalculator> {
                                   textController.text = '${textController.text}8';
                                 },
                                 style: ElevatedButton.styleFrom(
-                                    primary: widget.buttonColor,
+                                    backgroundColor: widget.buttonColor,
                                     fixedSize: Size(
                                       widget.width / 5,
                                       widget.width / 5,
@@ -243,7 +260,7 @@ class _SimpleCustomCalculatorState extends State<SimpleCustomCalculator> {
                                   textController.text = '${textController.text}9';
                                 },
                                 style: ElevatedButton.styleFrom(
-                                    primary: widget.buttonColor,
+                                    backgroundColor: widget.buttonColor,
                                     fixedSize: Size(
                                       widget.width / 5,
                                       widget.width / 5,
@@ -270,7 +287,7 @@ class _SimpleCustomCalculatorState extends State<SimpleCustomCalculator> {
                                   textController.text = '${textController.text}*';
                                 },
                                 style: ElevatedButton.styleFrom(
-                                    primary: widget.buttonColor,
+                                    backgroundColor: widget.buttonColor,
                                     fixedSize: Size(
                                       widget.width / 5,
                                       widget.width / 5,
@@ -305,7 +322,7 @@ class _SimpleCustomCalculatorState extends State<SimpleCustomCalculator> {
                                   textController.text = '${textController.text}4';
                                 },
                                 style: ElevatedButton.styleFrom(
-                                    primary: widget.buttonColor,
+                                    backgroundColor: widget.buttonColor,
                                     fixedSize: Size(
                                       widget.width / 5,
                                       widget.width / 5,
@@ -332,7 +349,7 @@ class _SimpleCustomCalculatorState extends State<SimpleCustomCalculator> {
                                   textController.text = '${textController.text}5';
                                 },
                                 style: ElevatedButton.styleFrom(
-                                    primary: widget.buttonColor,
+                                    backgroundColor: widget.buttonColor,
                                     fixedSize: Size(
                                       widget.width / 5,
                                       widget.width / 5,
@@ -359,7 +376,7 @@ class _SimpleCustomCalculatorState extends State<SimpleCustomCalculator> {
                                   textController.text = '${textController.text}6';
                                 },
                                 style: ElevatedButton.styleFrom(
-                                    primary: widget.buttonColor,
+                                    backgroundColor: widget.buttonColor,
                                     fixedSize: Size(
                                       widget.width / 5,
                                       widget.width / 5,
@@ -386,7 +403,7 @@ class _SimpleCustomCalculatorState extends State<SimpleCustomCalculator> {
                                   textController.text = '${textController.text}-';
                                 },
                                 style: ElevatedButton.styleFrom(
-                                    primary: widget.buttonColor,
+                                    backgroundColor: widget.buttonColor,
                                     fixedSize: Size(
                                       widget.width / 5,
                                       widget.width / 5,
@@ -421,7 +438,7 @@ class _SimpleCustomCalculatorState extends State<SimpleCustomCalculator> {
                                   textController.text = '${textController.text}1';
                                 },
                                 style: ElevatedButton.styleFrom(
-                                    primary: widget.buttonColor,
+                                    backgroundColor: widget.buttonColor,
                                     fixedSize: Size(
                                       widget.width / 5,
                                       widget.width / 5,
@@ -449,7 +466,7 @@ class _SimpleCustomCalculatorState extends State<SimpleCustomCalculator> {
                                   textController.text = '${textController.text}2';
                                 },
                                 style: ElevatedButton.styleFrom(
-                                    primary: widget.buttonColor,
+                                    backgroundColor: widget.buttonColor,
                                     fixedSize: Size(
                                       widget.width / 5,
                                       widget.width / 5,
@@ -476,7 +493,7 @@ class _SimpleCustomCalculatorState extends State<SimpleCustomCalculator> {
                                   textController.text = '${textController.text}3';
                                 },
                                 style: ElevatedButton.styleFrom(
-                                    primary: widget.buttonColor,
+                                    backgroundColor: widget.buttonColor,
                                     fixedSize: Size(
                                       widget.width / 5,
                                       widget.width / 5,
@@ -503,7 +520,7 @@ class _SimpleCustomCalculatorState extends State<SimpleCustomCalculator> {
                                   textController.text = '${textController.text}+';
                                 },
                                 style: ElevatedButton.styleFrom(
-                                    primary: widget.buttonColor,
+                                    backgroundColor: widget.buttonColor,
                                     fixedSize: Size(
                                       widget.width / 5,
                                       widget.width / 5,
@@ -540,7 +557,7 @@ class _SimpleCustomCalculatorState extends State<SimpleCustomCalculator> {
                                   }
                                 },
                                 style: ElevatedButton.styleFrom(
-                                    primary: widget.buttonColor,
+                                    backgroundColor: widget.buttonColor,
                                     fixedSize: Size(
                                       widget.width / 5,
                                       widget.width / 5,
@@ -563,7 +580,7 @@ class _SimpleCustomCalculatorState extends State<SimpleCustomCalculator> {
                                   textController.text = '${textController.text}0';
                                 },
                                 style: ElevatedButton.styleFrom(
-                                    primary: widget.buttonColor,
+                                    backgroundColor: widget.buttonColor,
                                     fixedSize: Size(
                                       widget.width / 5,
                                       widget.width / 5,
@@ -590,7 +607,7 @@ class _SimpleCustomCalculatorState extends State<SimpleCustomCalculator> {
                                   textController.text = '${textController.text}.';
                                 },
                                 style: ElevatedButton.styleFrom(
-                                    primary: widget.buttonColor,
+                                    backgroundColor: widget.buttonColor,
                                     fixedSize: Size(
                                       widget.width / 5,
                                       widget.width / 5,
@@ -618,7 +635,7 @@ class _SimpleCustomCalculatorState extends State<SimpleCustomCalculator> {
 
                                 },
                                 style: ElevatedButton.styleFrom(
-                                    primary: widget.buttonColor,
+                                    backgroundColor: widget.buttonColor,
                                     fixedSize: Size(
                                       widget.width / 5,
                                       widget.width / 5,
